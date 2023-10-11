@@ -1,0 +1,65 @@
+{
+    "brand_name": "UrbanX",
+    "car_models":[
+      {
+        "model_brand": "UrbanX CitySprint",
+        "price": "$19.99",
+        "image_url": "https://toycars-img.s3.eu-central-1.amazonaws.com/compact_cars/compact_car__other_colors_S1044797818_St25_G7.5.jpeg",
+        "description": "The UrbanX CitySprint toy car is a detailed miniature replica of the compact car, perfect for playtime adventures. Its small size and sleek design make it easy to zip around your miniature cityscape."
+      },
+      {
+        "model_brand": "UrbanX MetroCruiser",
+        "price": "$24.99",
+        "image_url": "https://toycars-img.s3.eu-central-1.amazonaws.com/compact_cars/compact_car__other_colors_S1044797819_St25_G7.5.jpeg",
+        "description": "The UrbanX MetroCruiser toy car is a fun and stylish miniature version of the real thing. It's great for imaginative urban exploration, with a design that captures the essence of city living."
+      },
+      {
+        "model_brand": "UrbanX UrbanLite",
+        "price": "$17.99",
+        "image_url": "https://toycars-img.s3.eu-central-1.amazonaws.com/compact_cars/compact_car__other_colors_S1044797820_St25_G7.5.jpeg",
+        "description": "The UrbanX UrbanLite toy car is an affordable and compact toy for city adventures. Its small size and easy handling make it a perfect choice for imaginative play in urban settings."
+      },
+      {
+        "model_brand": "UrbanX EcoDrive",
+        "price": "$29.99",
+        "image_url": "https://toycars-img.s3.eu-central-1.amazonaws.com/compact_cars/compact_car__other_colors_S2293546422_St25_G7.5.jpeg",
+        "description": "The UrbanX EcoDrive toy car is a miniature eco-conscious delight. It combines style and sustainability for eco-friendly playtime fun, replicating the look of its larger counterpart."
+      },
+      {
+        "model_brand": "UrbanX CityRunner",
+        "price": "$21.99",
+        "image_url": "https://toycars-img.s3.eu-central-1.amazonaws.com/compact_cars/compact_car__other_colors_S2293546423_St25_G7.5.jpeg",
+        "description": "The UrbanX CityRunner toy car is designed for quick and agile urban adventures in the palm of your hand. With its compact size, it's ready to explore the cityscape of your imagination."
+      },
+      {
+        "model_brand": "UrbanX TrendyCompact",
+        "price": "$26.99",
+        "image_url": "https://toycars-img.s3.eu-central-1.amazonaws.com/compact_cars/compact_car__other_colors_S2293546424_St25_G7.5.jpeg",
+        "description": "The UrbanX TrendyCompact toy car is a miniature fashion statement for your playtime city. Its modern design and compact size make it a stylish addition to your miniature world."
+      },
+      {
+        "model_brand": "UrbanX EasyCommute",
+        "price": "$18.99",
+        "image_url": "https://toycars-img.s3.eu-central-1.amazonaws.com/compact_cars/compact_car__other_colors_S2293546425_St25_G7.5.jpeg",
+        "description": "The UrbanX EasyCommute toy car is a compact and efficient choice for playtime city commuting. With its small size, it's perfect for zooming through your miniature urban landscape."
+      },
+      {
+        "model_brand": "UrbanX UrbanStar",
+        "price": "$23.99",
+        "image_url": "https://toycars-img.s3.eu-central-1.amazonaws.com/compact_cars/compact_car__other_colors_S2293546426_St25_G7.5.jpeg",
+        "description": "The UrbanX UrbanStar toy car seamlessly combines style and practicality. It's a versatile choice for imaginative urban adventures with its compact design and chic appearance."
+      },
+      {
+        "model_brand": "UrbanX CityGlider",
+        "price": "$20.99",
+        "image_url": "https://toycars-img.s3.eu-central-1.amazonaws.com/compact_cars/compact_car__other_colors_S2293546427_St25_G7.5.jpeg",
+        "description": "The UrbanX CityGlider toy car offers comfort and efficiency for your miniature city adventures. Its compact size and realistic details make it a great addition to your playtime cityscape."
+      },
+      {
+        "model_brand": "UrbanX ZipCity",
+        "price": "$15.99",
+        "image_url": "https://toycars-img.s3.eu-central-1.amazonaws.com/compact_cars/compact_car__other_colors_S2293546428_St25_G7.5.jpeg",
+        "description": "The UrbanX ZipCity toy car is a compact and affordable miniature designed for easy playtime maneuvering in toy city traffic. It's the perfect choice for budget-friendly imaginative city play."
+      }
+    ]
+    }

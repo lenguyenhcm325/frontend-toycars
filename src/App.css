@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+
+.container {
+  min-height: 100vh;
+  width: 1250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.root-outlet {
+  flex: 1; 
+}
+
+.navigation {
+  min-height: 50px;
+
+}
+
+.footer {
+  min-height: 50px;
+}
+
+#root {
+    justify-content: center;
+    display: flex;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
