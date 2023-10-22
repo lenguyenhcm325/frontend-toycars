@@ -3,13 +3,14 @@ import {Link} from "react-router-dom"
 import { PaymentSuccessContainer } from "./payment-success.styles";
 
 const PaymentSuccess = () => {
+    const backendEndpoint = import.meta.env.VITE_BACKEND_ENDPOINT;
     useEffect(() => {
         async function notifyPaymentSuccess(){
             try {
                 const headers = {
                     'Content-Type': 'application/json'
                 }
-                const response = await fetch("http://localhost:3000/payment/payment-received",
+                const response = await fetch(`${backendEndpoint}/payment/payment-received`,
                 {
                     method: "POST",
                     headers

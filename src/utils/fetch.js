@@ -5,9 +5,10 @@ import {
 } from "../store/brand/brand.action";
 
 export const fetchAllBrands = () => async (dispatch) => {
+  const backendEndpoint = import.meta.env.VITE_BACKEND_ENDPOINT;
   try {
     dispatch(fetchBrandsStart());
-    const response = await fetch("http://localhost:3000/api/cars");
+    const response = await fetch(`${backendEndpoint}/api/cars`);
     if (!response.ok) {
       dispatch(fetchBrandsError(new Error("Network error")));
     }

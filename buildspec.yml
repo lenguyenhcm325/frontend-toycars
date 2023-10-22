@@ -13,6 +13,7 @@ env:
     VITE_FIRESTORE_USER_PROFILES_BASE_URL: /toycars/dev/frontend/VITE_FIRESTORE_USER_PROFILES_BASE_URL
     VITE_GOOGLE_CLIENT_ID: /toycars/dev/frontend/VITE_GOOGLE_CLIENT_ID
     VITE_RECAPTCHA_V3_SITE_KEY: /toycars/dev/frontend/VITE_RECAPTCHA_V3_SITE_KEY
+    VITE_BACKEND_ENDPOINT: /toycars/dev/frontend/VITE_BACKEND_ENDPOINT
 phases:
   pre_build:
     commands:

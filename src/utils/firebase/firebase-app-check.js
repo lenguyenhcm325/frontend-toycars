@@ -8,6 +8,8 @@ import { initializeAppCheck, getToken } from "firebase/app-check";
 import { ReCaptchaV3Provider } from "firebase/app-check";
 import { app } from "./firebase.utils";
 const recaptchaV3SiteKey = import.meta.env.VITE_RECAPTCHA_V3_SITE_KEY;
+const backendEndpoint = import.meta.env.VITE_BACKEND_ENDPOINT;
+
 const appCheck = initializeAppCheck(
   app,
   {
@@ -20,7 +22,7 @@ export const callApiWithAppCheckExample = async () => {
   let appCheckTokenResponse;
   try {
     appCheckTokenResponse = await getToken(appCheck, false);
-    const response = await fetch("http://localhost:3000/api/secured", {
+    const response = await fetch(`${backendEndpoint}/api/secured`, {
       headers: {
         "X-Firebase-AppCheck": appCheckTokenResponse.token,
       },

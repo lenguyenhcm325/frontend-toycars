@@ -39,18 +39,6 @@ const SignUpWithEmail = () => {
     
       const handleSubmit = async (e) => {
         e.preventDefault();
-        // passUsernameUp(formData.username);
-        // const response = await fetch('http://localhost:3000/api/signup', {
-        //   method: "POST", 
-        //   headers: {
-        //     'Content-Type': 'application/json',
-        //   },
-        //   body: JSON.stringify(formData)
-        // })
-        // if (response.ok){
-        // }else {
-        //   // NEED TO IMPLEMENT THIS LATER
-        // }
       const {email, password} = formData;
       dispatch(handleCreateAuthUserWithEP(email, password))
       // if (currentError){

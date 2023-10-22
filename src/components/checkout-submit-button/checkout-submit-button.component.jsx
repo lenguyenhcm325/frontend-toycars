@@ -5,11 +5,11 @@ import { CheckoutSubmitButtonContainer } from './checkout-submit-button.styles';
 import { selectCheckoutItemsReqBody } from '../../store/cart/cart.selector';
 function CheckoutSubmitButton() {
   const checkoutItemsReqBody = useSelector(selectCheckoutItemsReqBody);
-
+  const backendEndpoint = import.meta.env.VITE_BACKEND_ENDPOINT;
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:3000/payment/create-checkout-session', {
+      const response = await fetch(`${backendEndpoint}/payment/create-checkout-session`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

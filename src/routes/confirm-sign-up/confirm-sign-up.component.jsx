@@ -6,7 +6,8 @@ import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { selectCurrentUser, selectAuthError } from "../../store/user/user.selector";
 const ConfirmSignUp = ({username}) => {
-const navigate = useNavigate();
+  const backendEndpoint = import.meta.env.VITE_BACKEND_ENDPOINT;
+  const navigate = useNavigate();
   const currentUser = useSelector(selectCurrentUser);
   const currentError = useSelector(selectAuthError);
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const navigate = useNavigate();
     
       const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://localhost:3000/api/confirm-signup', {
+        const response = await fetch(`${backendEndpoint}/api/confirm-signup`, {
           method: "POST", 
           headers: {
             'Content-Type': 'application/json',

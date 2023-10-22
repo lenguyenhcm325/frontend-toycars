@@ -5,6 +5,7 @@ import LoadingSpinner from "../../components/loading-spinner/loading-spinner.com
 import FilterSort from "../../components/filter-sort/filter-sort.component";
 import ResultModelCard from "../../components/result-model-card/result-model-card.component";
 const Results = () => {
+    const backendEndpoint = import.meta.env.VITE_BACKEND_ENDPOINT;
     const [isLoading, setIsLoading] = useState(true);
     const [resultsData, setResultsData] = useState([]);
     
@@ -33,7 +34,7 @@ const Results = () => {
 
 
 
-    const apiUrl = `http://localhost:3000/api/search?${searchParams.toString()}`
+    const apiUrl = `${backendEndpoint}/api/search?${searchParams.toString()}`
     console.log(searchParams.toString())
 
     useEffect(() => {

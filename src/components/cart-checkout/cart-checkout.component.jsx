@@ -34,13 +34,6 @@ const CartCheckout = ({deliveryCost}) => {
                     <p className="title">TOTAL PRICE</p>
                     <p>{calculateTotalCost(subTotal, deliveryCost)}</p>
                 </div>
-                {/* <div className="checkout-button-div">
-                    <form action="http://localhost:3000/payment/create-checkout-session" method="post">
-                    <input type="hidden" name="link" value="https://example.com/destination_page"/>
-                    <button type="submit" class="checkout-button">Checkout</button>
-                    </form>
-
-                </div> */}
                 <CheckoutSubmitButton/>
             </div>
 
