@@ -14,6 +14,7 @@ import SignUpForm from './routes/sign-up/sign-up.component.jsx';
 import Wishlist from './routes/wishlist/wishlist.component.jsx';
 import SignInForm from './routes/sign-in/sign-in.component.jsx';
 import PaymentSuccess from './routes/payment-success/payment-success.component.jsx';
+import DummyHealthcheck from './routes/dummy-healthcheck/dummy-healthcheck.component.jsx';
 import {
   createBrowserRouter, RouterProvider
 } from "react-router-dom";
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home/> 
+      },
+      {
+        path: "/dummyhealthcheck",
+        element: <DummyHealthcheck/>
       },
       {
         path: "/cart",

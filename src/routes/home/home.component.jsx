@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Fragment } from "react";
 import Carousel from "../../components/carousel/carousel.component";
 import { useSelector } from "react-redux";
 import { selectAllCarsInfo } from "../../store/brand/brand.selector";
 const Home = () => {
+    useEffect(() => {
+        console.log("api key");
+        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
+        console.log("api key");
+        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
+        console.log("api key");
+        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
+        console.log("api key");
+        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
+        console.log("api key");
+        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
 
+
+    }, [])
     const allCarsInfo = useSelector(selectAllCarsInfo); 
     return (
         <div>
