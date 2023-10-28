@@ -4,24 +4,6 @@ import { Link } from "react-router-dom";
 
 const SignInForm = () => {
     useEffect(() => {
-        console.log("api key")
-        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
-        console.log("api key")
-        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
-        console.log("api key")
-        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
-        console.log("api key")
-        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
-        console.log("api key")
-        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
-        console.log("api key")
-        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
-        console.log("api key")
-        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
-        console.log("api key")
-        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
-        console.log("api key")
-        console.log(import.meta.env.VITE_FIREBASE_API_KEY)
     }, [])
     return (
         <div>
