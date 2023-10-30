@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import LoadingSpinner from "../../../components/loading-spinner/loading-spinner.component";
 import { toPlainJSObject } from "../../../utils/firebase-document-to-js-object";
-import {TokenContext} from "../../../routes/root/root.component"
 import { ShowProfileContainer } from "./show-profile.styles";
-import {Routes, Route, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
+// Don't delete the line below, although it is unused!
 import { retrieveIdToken } from "../../../utils/firebase/firebase.utils";
-
-
 const auth = getAuth();
 const ShowProfile = () => {
     const [profileInfo, setProfileInfo] = useState(null);

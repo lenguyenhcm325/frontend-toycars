@@ -2,11 +2,11 @@ import React from 'react'
 import SignedOut from './routes/signed-out/signed-out.component.jsx';
 import ReactDOM from 'react-dom/client'
 import { PersistGate } from 'redux-persist/integration/react';
-import App from './App.jsx'
 import ShowProfile from './routes/profile/show-profile/show-profile.component.jsx';
 import {persistStore} from 'redux-persist'
+import App from './App.jsx';
+import "./App.css"
 import { store } from './store/store.js';
-import Root from './routes/root/root.component.jsx';
 import ErrorPage from './routes/error-page/error-page.component.jsx';
 import Home from './routes/home/home.component.jsx';
 import Cart from './routes/cart/cart.component.jsx';
@@ -26,7 +26,7 @@ import EditProfile from './routes/profile/edit-profile/edit-profile.component.js
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
@@ -92,8 +92,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}></PersistGate>
       <RouterProvider router={router} >
-
-        <Root />
+        <App />
       </RouterProvider>
     </Provider>,
 )

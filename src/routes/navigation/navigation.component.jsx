@@ -55,7 +55,7 @@ const Navigation = ({handleSearch}) => {
         <IconsContainer>
             {
                 currentUser && (
-                    <Link to={"/profile/"+ currentUser.uid} >
+                    <Link to={"/profile/"+ currentUser.uid} className="link">
                         <SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/user-svg.svg" text="Your profile" />
                     </Link>
                 )
