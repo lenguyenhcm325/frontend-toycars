@@ -120,8 +120,10 @@ export const clearCartOnFS = async (uid) => {
     const shoppingCartRef = collection(userDocumentRef, "shoppingCart");
     const allCartItemsSnapshot = await getDocs(shoppingCartRef);
     allCartItemsSnapshot.forEach((doc) => {
+      console.log(doc);
       batch.delete(doc.ref);
     });
+    await batch.commit();
   } else {
     throw new Error(
       "invalid operation, user's data doesn't exist on database and you try to clear cart"

@@ -23,8 +23,6 @@ import Results from './routes/results/results.component.jsx';
 import Profile from './routes/profile/profile.component.jsx';
 import EditProfile from './routes/profile/edit-profile/edit-profile.component.jsx';
 
-
-
 const router = createBrowserRouter([
   {
     path: "/",

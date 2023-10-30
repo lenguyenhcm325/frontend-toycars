@@ -110,8 +110,7 @@ export const cartReducer = (state = initialState, action) => {
   if (action.type == CART_ACTION_TYPES.CLEAR_CART_SUCCESS) {
     console.log("cleared all items inside the shopping cart successfully");
     return {
-      ...state,
-      isLoading: false,
+      ...initialState,
     };
   }
   if (action.type == CART_ACTION_TYPES.UPDATE_PRODUCT_QUANTITY_START) {
