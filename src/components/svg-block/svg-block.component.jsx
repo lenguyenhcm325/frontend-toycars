@@ -4,8 +4,8 @@ import { SVGContainer, SVGasImage } from "./svg-block.styles";
 
 const SVGBlock = ({src, text, onClick}) => {
 return (
-    <SVGContainer>
-            <SVGasImage onClick={onClick} src={src} alt="an SVG" />
+    <SVGContainer onClick={onClick}>
+            <SVGasImage  src={src} alt="an SVG" />
             <span style={{display: "block"}}>{text}</span>
             
 

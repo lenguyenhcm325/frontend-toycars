@@ -6,7 +6,7 @@ const PromptLoginAlert = () => {
 
 
     return (
-        <PromptLoginAlertContainer>Please login to continue</PromptLoginAlertContainer>
+        <PromptLoginAlertContainer>Please sign in to continue</PromptLoginAlertContainer>
     )
 }
 

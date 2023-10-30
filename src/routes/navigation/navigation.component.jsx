@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useEffect, useState, useRef} from "react";
 import { Link } from "react-router-dom";
 import PromptLoginAlert from "../../components/prompt-login-alert/prompt-login-alert.component";
 import Dummy from "../../components/dummy/dummy.component";
@@ -11,14 +11,24 @@ import SVGBlock from "../../components/svg-block/svg-block.component";
 import {IconsContainer, LogoContainer,CarLogo, BrandName, NavigationContainer, BrandNameContainer} from "./navigation.styles"
 const Navigation = ({handleSearch}) => {
     const [showPromptLogin, setShowPromptLogin] = useState(false);
-    // const [lastClicked, setLastClicked] = useState(null);
-
-    const handlePromptLoginAlert = () => {
+    const timerRef = useRef(null);
+    const handleClick = () => {
+        if (timerRef.current){
+            clearTimeout(timerRef.current)
+        }
         setShowPromptLogin(true);
-        setTimeout(() => {
+        timerRef.current = setTimeout(() => {
             setShowPromptLogin(false)
-        }, 2800)
+        }, 2000)
     }
+
+    useEffect(() => {
+        return () => {
+            if (timerRef.current){
+                clearTimeout(timerRef.current)
+            }
+        }
+    }, [])
 
     const currentUser = useSelector(selectCurrentUser);
     const currentError =useSelector(selectAuthError);
@@ -70,29 +80,21 @@ const Navigation = ({handleSearch}) => {
 
                 )
             }
-            {/* <SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/user-svg.svg" text="Login"/> */}
             {currentUser? 
             (<Link className="link" to="/cart">
             <SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/shopping-cart-svg.svg" text="Cart"/>
             </Link>): 
-            (<SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/shopping-cart-svg.svg" onClick={handlePromptLoginAlert} text="Cart"/>)
+            (<SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/shopping-cart-svg.svg" onClick={handleClick} text="Cart"/>)
             }
 
             {currentUser? 
             (<Link className="link" to="/wishlist">
             <SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/heart-svg.svg"  text="Wishlist"/></Link>):
-            (<SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/heart-svg.svg" onClick={handlePromptLoginAlert} text="Wishlist"/>)}
+            (<SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/heart-svg.svg" onClick={handleClick} text="Wishlist"/>)}
 
         </IconsContainer>
-
+        {currentUser && (<Dummy currentUser={currentUser}/>)}
         </NavigationContainer>
-        <BrandNameContainer>
-        <BrandName to="/" color="pink">UrbanX</BrandName>
-        <BrandName to="/" color="blue">AdrenalineRush</BrandName>
-        <BrandName to="/" color="teal">TrailBlitz</BrandName>
-        <BrandName to="/" color="green">XtremeDrive</BrandName>
-            {currentUser && (<Dummy currentUser={currentUser}/>)}
-        </BrandNameContainer>
 
 </div>
     )

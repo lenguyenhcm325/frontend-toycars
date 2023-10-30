@@ -16,7 +16,6 @@ export const PromptLoginAlertContainer = styled.div`
     color: #fff;
     border-radius: 8px;
     
-    animation: ${fadeInOut} 3s forwards;
 
 `
 
