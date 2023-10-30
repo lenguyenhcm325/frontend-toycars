@@ -16,6 +16,9 @@ export const CartItemsContainer =  styled.div`
     grid-template-columns: 1fr 1fr;
 }
 
+& .no-item-msg {
+    font-size: 32px;
+}
 
 
 

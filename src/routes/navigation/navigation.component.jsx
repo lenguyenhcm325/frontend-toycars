@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { handleSignOutAuthUser } from "../../store/user/user.thunk";
 import { selectCurrentUser, selectAuthError } from "../../store/user/user.selector";
 import SVGBlock from "../../components/svg-block/svg-block.component";
-import {IconsContainer, LogoContainer,CarLogo, BrandName, NavigationContainer, BrandNameContainer} from "./navigation.styles"
+import {IconsContainer, LogoContainer,CarLogo, NavigationContainer} from "./navigation.styles"
 const Navigation = ({handleSearch}) => {
     const [showPromptLogin, setShowPromptLogin] = useState(false);
     const timerRef = useRef(null);

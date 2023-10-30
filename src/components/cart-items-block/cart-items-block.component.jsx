@@ -24,7 +24,7 @@ const CartItemsBlock = ({onBubble}) => {
                 return (<CartItemDisplay key={flattenNameWithoutSpace} item={cartItem[flattenNameWithoutSpace]} />)
             })
         }{
-            !cartItems.length && (<h2>Currently there is no item in the shopping cart</h2>)
+            !cartItems.length && (<h2 className="no-item-msg">Currently there is no item in the shopping cart</h2>)
         }
         {
             isOnDeliverySection && (
