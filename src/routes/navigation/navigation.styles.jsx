@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 // import { ReactComponent as CartSVGFile } from "../../assets/shopping-cart-svg.svg"
 
 
+
 export const BrandNameContainer = styled.div`
     display: flex;
     padding-top: 20px;
@@ -11,9 +12,16 @@ export const BrandNameContainer = styled.div`
 `
 
 export const NavigationContainer = styled.div`
+    margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+& .link, & .link:visited {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
 `
 
 export const LogoContainer = styled.div`
@@ -27,6 +35,7 @@ export const IconsContainer = styled.div`
     width: 12%;
     justify-content: space-around;
     gap: 24px;
+    font-size: 16px;
     padding-right: 16px;
 `
 
@@ -39,15 +48,6 @@ export const CarLogo = styled(CarLogoSVG)`
     height: 64px;
     cursor: pointer;
 `
-// export const UserSVG = styled(UserSVGFile)`
-//     width: 24px;
-//     height: 24px;
-// `
-
-// export const CartSVG = styled(CartSVGFile)`
-//     width: 24px;
-//     height: 24px;
-// `
 
 
 

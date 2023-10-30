@@ -37,6 +37,7 @@ const Navigation = ({handleSearch}) => {
     const dispatch = useDispatch();
     const myStyles={
         width: "100%",
+
     }
     const navigate = useNavigate(); 
     return (
@@ -44,7 +45,6 @@ const Navigation = ({handleSearch}) => {
         {
             showPromptLogin && (<PromptLoginAlert/>)
         }
-        {/* (<PromptLoginAlert/>) */}
         <NavigationContainer>
             <LogoContainer>
             <Link to="/"><CarLogo/></Link>
@@ -61,7 +61,7 @@ const Navigation = ({handleSearch}) => {
             }
             {
                 !currentUser? (
-                    <Link to="/signin" style={{ textDecoration: 'none' }}>
+                    <Link to="/signin" className="link">
                     <SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/log-in-svg.svg" text="Sign in"/>
                     </Link>
                 ) :
@@ -81,14 +81,14 @@ const Navigation = ({handleSearch}) => {
             }
             {/* <SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/user-svg.svg" text="Login"/> */}
             {currentUser? 
-            (<Link to="/cart" style={{ textDecoration: 'none' }}>
+            (<Link className="link" to="/cart">
             <SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/shopping-cart-svg.svg" text="Cart"/>
             </Link>): 
             (<SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/shopping-cart-svg.svg" onClick={handlePromptLoginAlert} text="Cart"/>)
             }
 
             {currentUser? 
-            (<Link to="/wishlist" style={{ textDecoration: 'none' }}>
+            (<Link className="link" to="/wishlist">
             <SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/heart-svg.svg"  text="Wishlist"/></Link>):
             (<SVGBlock src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/heart-svg.svg" onClick={handlePromptLoginAlert} text="Wishlist"/>)}
 
