@@ -15,7 +15,7 @@ export const SignInWithEmailContainer = styled.div`
 }
 
 & .form-div {
-    width: 320px;
+    width: 340px;
     display: flex;
     flex-direction: column; 
     gap: 8px;

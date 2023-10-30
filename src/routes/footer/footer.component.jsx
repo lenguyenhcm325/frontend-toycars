@@ -7,14 +7,8 @@ const Footer = () => {
         <FooterContainer>
             <CTA/>
             <FooterInfoBox/>
-            
         </FooterContainer>
-
-
     )
-
-
-
 }
 
 

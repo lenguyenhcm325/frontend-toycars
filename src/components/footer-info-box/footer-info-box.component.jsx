@@ -21,23 +21,19 @@ return (
 
         <div>
             <FooterSectionHeader>Address</FooterSectionHeader>
-            <p>Pasewalker Straße 54</p>
-            <p>04684 Nerchau</p>
+            <p>Musterstraße 54</p>
+            <p>12345 Musterstadt</p>
             
 
         </div>
         <div>
             <FooterSectionHeader>Contact</FooterSectionHeader>
-            <p>T: <a href="/">+49 6732 128 491</a></p>
-            <p>E: <a href="/">tizian.ernst@yahoo.com</a></p>
+            <p>T: <a href="/">+49 3012 345 678</a></p>
+            <p>E: <a href="/">max.mustermann@mail.de</a></p>
 
         </div>
 
     </FooterInfoBoxContainer>
-
-
-)
-
+    )
 }
-
 export default FooterInfoBox;

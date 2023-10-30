@@ -32,6 +32,7 @@ export const LogoContainer = styled.div`
     // display: flex;
     width: 12%;
     // justify-content: center;   
+    
 `
 
 export const IconsContainer = styled.div`
@@ -51,6 +52,7 @@ export const CarLogo = styled(CarLogoSVG)`
     width: 64px;
     height: 64px;
     cursor: pointer;
+
 `
 
 

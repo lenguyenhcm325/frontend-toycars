@@ -5,10 +5,8 @@ import { EmailInputField, EmailSubmitButton, CTAEmailBoxContainer } from "./cta-
 const CTAEmailBox = () => {
 return(    <CTAEmailBoxContainer>
     <form>
-    <EmailInputField placeholder="Email address" type="text"/>
-    <EmailSubmitButton type="submit">Submit</EmailSubmitButton>
-
-
+        <EmailInputField placeholder="Email address" type="text"/>
+        <EmailSubmitButton type="submit">Submit</EmailSubmitButton>
     </form>
 
 </CTAEmailBoxContainer>)
