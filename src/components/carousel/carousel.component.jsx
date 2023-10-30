@@ -73,7 +73,7 @@ const Carousel = ({carModels, brandName}) => {
 
         if (i % numSlidesOnCarousel === 0){
             if (Math.floor(i/numSlidesOnCarousel + 1) == carouselPage){
-                dotArray.push(<Dot key={Math.random().toString(36).substring(7)} color="pink" onClick={() => handleDotClick(i)}/>)
+                dotArray.push(<Dot key={Math.random().toString(36).substring(7)} color="#4dabf7" onClick={() => handleDotClick(i)}/>)
             }
             else {
                 dotArray.push(<Dot key={Math.random().toString(36).substring(7)} onClick={() => handleDotClick(i)}/>)

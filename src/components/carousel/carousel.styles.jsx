@@ -11,7 +11,7 @@ export const Dot = styled.div`
     cursor: pointer;
     height: 16px; 
     border-radius: 8px;
-    background-color: ${(props) => props.color || "green"};
+    background-color: ${(props) => props.color || "#d0ebff"};
 
 `
 
