@@ -22,6 +22,10 @@ export const NavigationContainer = styled.div`
     text-align: center;
     color: black;
 }
+
+& .search-bar-outer-div {
+    flex: 1;
+}
 `
 
 export const LogoContainer = styled.div`

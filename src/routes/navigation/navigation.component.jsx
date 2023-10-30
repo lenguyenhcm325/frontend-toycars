@@ -18,18 +18,6 @@ const Navigation = ({handleSearch}) => {
         setTimeout(() => {
             setShowPromptLogin(false)
         }, 2800)
-
-        // const now = new Date().getTime();
-
-        // // If the function was called less than 1 second ago
-        // if (lastClicked && now - lastClicked < 4000) {
-        //     setShowPromptLogin(true);
-        //     setTimeout(() => {
-        //         setShowPromptLogin(false);
-        //     }, 4000);
-        // }
-    
-        // setLastClicked(now);
     }
 
     const currentUser = useSelector(selectCurrentUser);
@@ -50,7 +38,10 @@ const Navigation = ({handleSearch}) => {
             <Link to="/"><CarLogo/></Link>
                 
             </LogoContainer>
-        <SearchBar onSearch={handleSearch}/>
+            <div className="search-bar-outer-div">
+                <SearchBar onSearch={handleSearch}/>
+            </div>
+        
         <IconsContainer>
             {
                 currentUser && (
