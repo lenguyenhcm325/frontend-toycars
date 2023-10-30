@@ -12,21 +12,9 @@ const SignUpWithEmail = () => {
   const currentError = useSelector(selectAuthError);
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  
-  //     if (currentError){
-  //       setErrorToDisplay(currentError);
-  //       dispatch(clearStateAfterError())
-  // } 
-
-  // }, [currentError])
-
     const [formData, setFormData] = useState({
         email: '',
         password: '',
-        // username: '',
-        // given_name: '',
-        // family_name:'',
       });
     
       const handleChange = (e) => {
@@ -52,41 +40,8 @@ return (
     <SignUpWithEmailContainer>
       {currentUser && !currentError && <Navigate to="/" replace={true}/>}
     <h2>Sign Up</h2>
-    <form onSubmit={handleSubmit}>
-      {/* <div>
-        <label htmlFor="given_name">Given name:</label>
-        <input
-          type="text"
-          id="given_name"
-          name="given_name"
-          value={formData.given_name}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="family_name">Family name:</label>
-        <input
-          type="text"
-          id="family_name"
-          name="family_name"
-          value={formData.family_name}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-          required
-        />
-      </div> */}
-      <div>
+    <form onSubmit={handleSubmit} className="form-div">
+      <div className="input-field-div">
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -97,7 +52,7 @@ return (
           required
         />
       </div>
-      <div>
+      <div className="input-field-div">
         <label htmlFor="password">Password:</label>
         <input
           type="password"

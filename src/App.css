@@ -2,6 +2,12 @@ body {
   margin: 0;
 }
 
+/* body, h1, h2, h3, h4, h5, h6, p, blockquote, figure, dl, dd, ul, ol, li, pre, table, th, td {
+  margin: 0;
+  padding: 0;
+} */
+
+
 .container {
   min-height: 100vh;
   width: 1250px;

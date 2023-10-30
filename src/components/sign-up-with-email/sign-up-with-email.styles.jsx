@@ -2,6 +2,20 @@ import styled from "styled-components";
 
 export const SignUpWithEmailContainer = styled.div`
 
+
+& .form-div {
+    width: 320px;
+    display: flex;
+    flex-direction: column; 
+    gap: 8px;
+}
+
+& .input-field-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 & input {
   
 
@@ -22,6 +36,7 @@ export const SignUpWithEmailContainer = styled.div`
   }
 
 & button {
+    margin-top: 4px;
     background-color: #3498db; /* Light blue color */
     color: #fff; /* White text color */
     border: none; /* Remove the border */

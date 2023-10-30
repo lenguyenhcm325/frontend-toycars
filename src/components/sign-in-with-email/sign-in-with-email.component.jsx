@@ -52,8 +52,8 @@ return (
       }
 
     <h2>Sign In</h2>
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} className="form-div">
+      <div className="input-field-div">
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -64,7 +64,7 @@ return (
           required
         />
       </div>
-      <div>
+      <div className="input-field-div">
         <label htmlFor="password">Password:</label>
         <input
           type="password"
