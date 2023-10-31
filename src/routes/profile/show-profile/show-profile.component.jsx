@@ -18,8 +18,6 @@ const ShowProfile = () => {
         onAuthStateChanged(auth,async (user) => {
             setIsLoading(true);
             if (user){
-
-
               try {
                 const token1 = await user.getIdToken();
                 setToken(token1);
@@ -75,19 +73,19 @@ const ShowProfile = () => {
                         <div className="info">
                             <div className="field">
                                 <label for="first-name">First Name:</label>
-                                <span id="first-name">{profileInfo.given_name}</span>
+                                <span id="first-name">{profileInfo.given_name ? profileInfo.given_name : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="last-name">Last Name:</label>
-                                <span id="last-name">{profileInfo.family_name}</span>
+                                <span id="last-name">{profileInfo.family_name ? profileInfo.family_name : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="email">Email Address:</label>
-                                <span id="email">{profileInfo.email}</span>
+                                <span id="email">{profileInfo.email ? profileInfo.email : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="phone">Phone Number:</label>
-                                <span id="phone">{profileInfo.phone_number}</span>
+                                <span id="phone">{profileInfo.phone_number ? profileInfo.phone_number : "Not provided"}</span>
                             </div>
                         </div>
                     </div>
@@ -99,27 +97,27 @@ const ShowProfile = () => {
                         <div className="info">
                             <div className="field">
                                 <label for="billing-address-1">Billing Address Line 1:</label>
-                                <span id="billing-address-1">{profileInfo.billing_address && profileInfo.billing_address.line_1}</span>
+                                <span id="billing-address-1">{(profileInfo.billing_address && profileInfo.billing_address.line_1) ? profileInfo.billing_address.line_1 : "Not provided" }</span>
                             </div>
                             <div className="field">
                                 <label for="billing-address-2">Billing Address Line 2:</label>
-                                <span id="billing-address-2">{profileInfo.billing_address && profileInfo.billing_address.line_2}</span>
+                                <span id="billing-address-2">{(profileInfo.billing_address && profileInfo.billing_address.line_2) ? profileInfo.billing_address.line_2 : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="billing-city">City:</label>
-                                <span id="billing-city">{profileInfo.billing_address && profileInfo.billing_address.city}</span>
+                                <span id="billing-city">{(profileInfo.billing_address && profileInfo.billing_address.city) ? profileInfo.billing_address.city : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="billing-state">State/Province:</label>
-                                <span id="billing-state">{profileInfo.billing_address && profileInfo.billing_address.state}</span>
+                                <span id="billing-state">{(profileInfo.billing_address && profileInfo.billing_address.state) ? profileInfo.billing_address.state : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="billing-zip">ZIP/Postal Code:</label>
-                                <span id="billing-zip">{profileInfo.billing_address && profileInfo.billing_address.postal_code}</span>
+                                <span id="billing-zip">{(profileInfo.billing_address && profileInfo.billing_address.postal_code) ? profileInfo.billing_address.postal_code : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="billing-country">Country:</label>
-                                <span id="billing-country">{profileInfo.billing_address && profileInfo.billing_address.country}</span>
+                                <span id="billing-country">{(profileInfo.billing_address && profileInfo.billing_address.country) ? profileInfo.billing_address.country : "Not provided"}</span>
                             </div>
                         </div>
                     </div>
@@ -129,27 +127,27 @@ const ShowProfile = () => {
                         <div className="info">
                             <div className="field">
                                 <label for="delivery-address-1">Delivery Address Line 1:</label>
-                                <span id="delivery-address-1">{profileInfo.delivery_address && profileInfo.delivery_address.line_1}</span>
+                                <span id="delivery-address-1">{(profileInfo.delivery_address && profileInfo.delivery_address.line_1) ? profileInfo.delivery_address.line_1 : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="delivery-address-2">Delivery Address Line 2:</label>
-                                <span id="delivery-address-2">{profileInfo.delivery_address && profileInfo.delivery_address.line_2}</span>
+                                <span id="delivery-address-2">{(profileInfo.delivery_address && profileInfo.delivery_address.line_2) ? profileInfo.delivery_address.line_2 : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="delivery-city">City:</label>
-                                <span id="delivery-city">{profileInfo.delivery_address && profileInfo.delivery_address.city}</span>
+                                <span id="delivery-city">{(profileInfo.delivery_address && profileInfo.delivery_address.city) ? profileInfo.delivery_address.city : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="delivery-state">State/Province:</label>
-                                <span id="delivery-state">{profileInfo.delivery_address && profileInfo.delivery_address.state}</span>
+                                <span id="delivery-state">{(profileInfo.delivery_address && profileInfo.delivery_address.state) ? profileInfo.delivery_address.state : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="delivery-zip">ZIP/Postal Code:</label>
-                                <span id="delivery-zip">{profileInfo.delivery_address && profileInfo.delivery_address.postal_code}</span>
+                                <span id="delivery-zip">{(profileInfo.delivery_address && profileInfo.delivery_address.postal_code) ? profileInfo.delivery_address.postal_code : "Not provided"}</span>
                             </div>
                             <div className="field">
                                 <label for="delivery-country">Country:</label>
-                                <span id="delivery-country">{profileInfo.delivery_address && profileInfo.delivery_address.country}</span>
+                                <span id="delivery-country">{(profileInfo.delivery_address && profileInfo.delivery_address.country) ? profileInfo.delivery_address.country : "Not provided"}</span>
                             </div>
                         </div>
                     </div>
