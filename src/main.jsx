@@ -5,6 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import ShowProfile from './routes/profile/show-profile/show-profile.component.jsx';
 import {persistStore} from 'redux-persist'
 import App from './App.jsx';
+import NotFound from './components/not-found/not-found.component.jsx';
 import "./App.css"
 import { store } from './store/store.js';
 import ErrorPage from './routes/error-page/error-page.component.jsx';
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
+    errorElement: <NotFound/>,
     children: [
       {
         index: true,
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
             element: <EditProfile />
           }
         ] 
+      },
+      {
+        path: "*",
+        element: <NotFound/>
       }
     ]
   }, 
