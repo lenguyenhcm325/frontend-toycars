@@ -22,7 +22,6 @@ export const callApiWithAppCheckExample = async () => {
       throw new Error("network error");
     }
     const data = await response.json();
-    console.log(data);
   } catch (err) {
     // Handle any errors if the token was not retrieved.
     console.error(JSON.stringify(err));

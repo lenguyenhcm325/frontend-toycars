@@ -26,8 +26,5 @@ export const selectCheckoutItemsReqBody = (state) => {
       [flattenNameWithoutSpace]: productQuantity,
     });
   });
-  console.log(result);
-  console.log(result);
-  console.log(result);
   return result;
 };

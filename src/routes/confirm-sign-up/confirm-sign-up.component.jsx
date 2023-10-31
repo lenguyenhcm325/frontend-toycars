@@ -28,10 +28,9 @@ const ConfirmSignUp = ({username}) => {
           body: JSON.stringify({confirmationCode, username})
         })
         if (response.ok){
-            console.log("OK!!!!")
             navigate("/");
         }else {
-            console.log("SOMETHING WENT REALLY WRONG!")
+          // TODO implement some logic here
         }
 
       };

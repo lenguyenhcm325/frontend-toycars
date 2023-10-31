@@ -35,7 +35,7 @@ const Results = () => {
 
 
     const apiUrl = `${backendEndpoint}/api/search?${searchParams.toString()}`
-    console.log(searchParams.toString())
+ 
 
     useEffect(() => {
         setResultsData([])
@@ -50,11 +50,6 @@ const Results = () => {
 
                 setResultsData( await response.json())
                 setIsLoading(false)
-                console.log(resultsData);
-                console.log(resultsData);
-                console.log(resultsData);
-                console.log(resultsData);
-                console.log("did it reach here?")
             }
             catch(error){
             console.error("Error", error.message);
@@ -62,11 +57,6 @@ const Results = () => {
             }
         }
         fetchResultsData();
-        console.log(searchParams);
-        console.log(searchParams);
-        console.log(searchParams);
-        console.log(searchParams);
-        console.log(searchParams);
     }, [searchParams.toString()])
 
     const priceRangeParam = searchParams.get("priceRange")

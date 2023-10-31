@@ -41,11 +41,6 @@ const auth = getAuth();
 
 export const retrieveIdToken = async () => {
   const user = auth.currentUser;
-  console.log("this is user");
-  console.log(user);
-  console.log(user);
-  console.log(user);
-  console.log(user);
   const token = await user.getIdToken();
   return token;
 };
@@ -57,10 +52,6 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
 
 export const signInWithGoogle = async () => {
   const result = await signInWithPopup(auth, provider);
-  console.log(await result.user.getIdToken());
-  console.log(await result.user.getIdToken());
-  console.log(await result.user.getIdToken());
-  console.log(await result.user.getIdToken());
   return result;
 };
 
@@ -93,10 +84,7 @@ export const addEntryToShoppingCartTest = async () => {
         "The XtremeDrive CanyonTracker Off-Road toy is ready to navigate steep canyons and rugged terrain in your playtime world. Embark on thrilling off-road adventures with this toy.",
       quantity: 20,
     });
-    console.log("Document written with ID: ", newDocRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
+  } catch (e) {}
 };
 
 export const existsUserProfile = async (uid) => {
@@ -125,10 +113,8 @@ export const createIfNotExistUserProfile = async (uid) => {
   try {
     const profileExists = await existsUserProfile(uid);
     if (profileExists) {
-      console.log("profile already there");
       return true;
     } else {
-      console.log("creating user profile...");
       await createUserProfile(uid);
       return true;
     }

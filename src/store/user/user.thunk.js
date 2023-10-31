@@ -119,12 +119,6 @@ export const handleSignInAuthUserWithEP =
       dispatch(emailLoginSuccess({ email, uid }));
       dispatch(handleFetchWishlistFromFS(uid));
     } catch (error) {
-      console.log(error.code);
-      console.log(error.message);
-      console.log(error.code);
-      console.log(error.message);
-      console.log(error.code);
-      console.log(error.message);
       if (
         error.code === "auth/user-not-found" ||
         error.code === "auth/wrong-password"

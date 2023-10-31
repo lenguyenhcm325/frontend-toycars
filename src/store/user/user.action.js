@@ -54,7 +54,6 @@ export const emailLoginError = (error) => {
 };
 
 export const emailLoginSuccess = (data) => {
-  console.log("logged in success");
   return {
     type: USER_ACTION_TYPES.EMAIL_LOGIN_SUCCESS,
     payload: data,
@@ -62,7 +61,6 @@ export const emailLoginSuccess = (data) => {
 };
 
 export const logoutStart = () => {
-  console.log("being logged out");
   return {
     type: USER_ACTION_TYPES.LOGOUT_START,
   };

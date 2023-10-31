@@ -55,11 +55,7 @@ return (<CartQuantityAdjustContainer>
     <input
       type="number"
       value={displayQuantity}
-      onChange={(e) => {
-        console.log("up")
-        console.log(e.target.value)
-        console.log("down")
-        
+      onChange={(e) => {        
         handleChangeQuantity(e.target.value)
       }}
     />

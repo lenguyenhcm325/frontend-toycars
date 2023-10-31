@@ -65,7 +65,6 @@ const EditProfile = () => {
                 // UNAUTHORIZED
                 // UNAUTHENTICATED
                 setIsLoading(false)
-                console.log("hit this else user");
             }
         })
     }, [])
@@ -78,8 +77,6 @@ const EditProfile = () => {
         for (let i = 0 ; i < entriesData.length; i++){
             if (entriesData[i][0].includes(".")){
                 const keys = entriesData[i][0].split(".");
-                console.log(keys);
-                console.log(entriesData[i][1])
                 const outerKey = keys[0];
                 const innerKey = keys[1];
                 if (!infoFormInput[outerKey]){
@@ -95,9 +92,6 @@ const EditProfile = () => {
                 infoFormInput[entriesData[i][0]] = entriesData[i][1]
             }
         }
-        console.log(infoFormInput)
-        console.log(infoFormInput)
-
         let apiUrl = baseApiUrl + uid;
         let reqBody = {
             name: reqBodyBaseName + uid,
@@ -181,7 +175,6 @@ const EditProfile = () => {
                 throw new Error("Either not authorized or network error");
             }
             const data = await response.json();
-            console.log("Document updated", data);
             setChangeSaved(true);
         }catch(error){
             console.error("Error", JSON.stringify(error));

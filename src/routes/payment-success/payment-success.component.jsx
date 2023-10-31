@@ -13,10 +13,6 @@ const PaymentSuccess = () => {
     const [showNotFound, setShowNotFound] = useState(true);
     const [isLoading, setIsLoading] = useState(true);
     const sessionId = searchParams.get("session_id")
-    console.log(sessionId)
-    console.log(sessionId)
-    console.log(sessionId)
-    console.log(sessionId)
     const backendEndpoint = import.meta.env.VITE_BACKEND_ENDPOINT;
     useEffect(() => {
         async function notifyPaymentSuccess(){
@@ -46,8 +42,7 @@ const PaymentSuccess = () => {
                     setShowNotFound(false);
                 }
             }catch(err){
-                console.log("something went wrong with verifying session")
-                console.log(err);
+                setShowNotFound(true);
             }
         }
         async function performMountLogic() {
