@@ -1,45 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSelector } from 'react-redux';
 import { ArrowLeft, ArrowRight } from "./carousel.styles";
 import CarouselSlide from "../carousel-slide/carousel-slide.component";
 import { CarouselContainer, Dot } from "./carousel.styles";
-import { selectAllCarsInfo } from "../../store/brand/brand.selector";
 import { selectWishlistedModelNames } from "../../store/wishlist/wishlist.selector";
 const Carousel = ({carModels, brandName}) => {
-    // const [carModels, setCarModels] = useState([]);
-    // const [brandName, setBrandName] = useState('');
     let numSlidesOnCarousel = 3;
-    // useEffect(() => {
-    //     async function fetchData() {
-    //       try {
-    //         const response = await fetch("../../../dummy.json");
-    //         if (!response.ok) {
-    //           throw new Error('JSON response was not ok');
-    //         }
-    //         const data = await response.json();
-    //         setCarModels(data.car_models);
-    //         setBrandName(data.brand_name);
-    //         console.log(data);
-    //       } catch (error) {
-    //         console.error('Error fetching and parsing JSON:', error);
-    //       }
-    //     }
-    
-    //     fetchData();
-    //   }, []);
-    // fetch("../../../dummy.json")
-    // .then(response => response.json())
-    // .then((data) => { carModels = data, console.log(data) })
-    // .catch((error) => {
-    //     console.error('Error fetching and parsing JSON:', error);
-    //   });;
-    // const {brand_name, car_models} = carModels;
-    // console.log(car_models)
-    // console.log(brand_name)
-    // console.log('gay')
-
-
-    
     const wishlistedModelNames = useSelector(selectWishlistedModelNames);
 
     const [carouselPage, setCarouselPage] = useState(1);

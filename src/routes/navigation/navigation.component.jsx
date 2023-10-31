@@ -9,7 +9,7 @@ import { handleSignOutAuthUser } from "../../store/user/user.thunk";
 import { selectCurrentUser, selectAuthError } from "../../store/user/user.selector";
 import SVGBlock from "../../components/svg-block/svg-block.component";
 import {IconsContainer, LogoContainer,CarLogo, NavigationContainer} from "./navigation.styles"
-const Navigation = ({handleSearch}) => {
+const Navigation = () => {
     const [showPromptLogin, setShowPromptLogin] = useState(false);
     const timerRef = useRef(null);
     const handleClick = () => {
@@ -49,7 +49,7 @@ const Navigation = ({handleSearch}) => {
                 
             </LogoContainer>
             <div className="search-bar-outer-div">
-                <SearchBar onSearch={handleSearch}/>
+                <SearchBar/>
             </div>
         
         <IconsContainer>

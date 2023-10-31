@@ -67,9 +67,6 @@ export const ShowProfileContainer = styled.div`
 & span {
     width: 60%;
     display: flex;
-    
-    // background-color: #f9f9f9;
-    // border: 1px solid #ddd;
     border-radius: 3px;
     font-size: 20px;
     margin-bottom: 12px;

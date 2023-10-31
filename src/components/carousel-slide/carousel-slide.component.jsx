@@ -4,13 +4,9 @@
 import { CarouselSlideContainer, CarouselImage } from "./carousel-slide.styles";
 import ToggleWishlistButton from "../toggle-wishlist-button/toggle-wishlist-button.component";
 import SlideText from "../slide-text/slide-text.component";
-import { useDispatch } from "react-redux";
 import { selectCurrentUser } from "../../store/user/user.selector";
-import { selectWishlist, selectWishlistedModelNames } from "../../store/wishlist/wishlist.selector";
-import { stringNormalizer } from "../../utils/string-normalizer";
  const CarouselSlide = ({number, image_url, model_brand, price , brand_name, description, wishlisted}) => {
     const currentUser = useSelector(selectCurrentUser);
-    const dispatch = useDispatch(); 
     const [isHovered, setIsHovered] = useState(false); 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -19,10 +15,6 @@ import { stringNormalizer } from "../../utils/string-normalizer";
         setIsHovered(false);
     }
 
-
-    const wishlist = useSelector(selectWishlist);
-    const modelNames = useSelector(selectWishlistedModelNames)
-    const flattenModelName = stringNormalizer(model_brand)
     const fillWishlistHeart = () => {
         if (wishlisted){
             return "true"
@@ -31,33 +23,12 @@ import { stringNormalizer } from "../../utils/string-normalizer";
             return undefined
         }
     } 
-    // if (currentUser){
-    //     const toggleWishlistButtonProps = {
-    //         uid: currentUser.uid,
-    //         model_brand,
-    //         price,
-    //         image_url, 
-    //         description
-    //     }        
-    // }else {
-    //     const toggleWishlistButtonProps = undefined        
-    // }
-
     return (
         <CarouselSlideContainer>
 
             <CarouselImage url={image_url}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-
-
-            // {   uid
-            //     model_brand, 
-            //     price,
-            //     image_url, 
-            //     description,
-            //     brand_name
-            //     }
             />
 
             {currentUser && isHovered && 
@@ -75,7 +46,6 @@ import { stringNormalizer } from "../../utils/string-normalizer";
             />        
             }
             <SlideText model_brand={model_brand} price={price}/>
-
 
             <AddToCartButton
             image_url={image_url} 

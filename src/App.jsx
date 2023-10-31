@@ -6,7 +6,6 @@ import Navigation from "./routes/navigation/navigation.component";
 import Footer from "./routes/footer/footer.component";
 import { Outlet } from "react-router-dom";
 
-
 export const TokenContext = createContext(null);
 const App = () => {
   const dispatch = useDispatch(); 
@@ -24,7 +23,6 @@ const App = () => {
       dispatch(fetchAllBrands());
     }, [dispatch]);
 
-
     return (
         <StyleSheetManager shouldForwardProp={(prop) => prop !== 'url'}>
           <div className="container">
@@ -34,8 +32,6 @@ const App = () => {
           </div>
         </StyleSheetManager>
     )
-
-    
 }
 
 export default App;

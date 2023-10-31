@@ -17,15 +17,12 @@ const CartQuantityAdjust = ({model_brand, image_url, description ,price, quantit
                 model_brand, image_url, description ,price
             }))
         }
-
-
     }
     const handleClearProduct = () => {
         dispatch(handleClearProductFromCartOnFS(currentUser.uid, {
             model_brand, image_url, description ,price
         }))
     }
-
     const handleDecreaseQuantity = () => {
         if (displayQuantity <= 1){
             return;
@@ -49,16 +46,12 @@ const CartQuantityAdjust = ({model_brand, image_url, description ,price, quantit
         }
         setDisplayQuantity(valueToPick);
         dispatch(handleUpdateProductQuantityOnFS(currentUser.uid, {model_brand, image_url, description ,price, quantity:valueToPick}));
-        
-
-
     }
 
 return (<CartQuantityAdjustContainer>
     <SVGasImage src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/plus-svg.svg" 
     onClick={handleIncreaseQuantity}
     />
-    {/* <div>{parseInt(quantity)}</div> */}
     <input
       type="number"
       value={displayQuantity}
@@ -75,9 +68,6 @@ return (<CartQuantityAdjustContainer>
     <SVGasImage className="bin-svg" src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/trash-2-svg.svg"
     onClick={handleClearProduct}/>
 </CartQuantityAdjustContainer>)
-
-
-
 }
 
 export default CartQuantityAdjust

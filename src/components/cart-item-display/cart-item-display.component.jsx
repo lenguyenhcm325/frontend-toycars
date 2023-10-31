@@ -3,7 +3,6 @@ import { CartItemContainer, CartItemImage, CartItemInfoContainer } from "./cart-
 import CartQuantityAdjust from "../cart-quantity-adjust/cart-quantity-adjust.component";
 const CartItemDisplay = (props) => {
     const {item} = props; 
-
     return (
         <CartItemContainer>
             <CartItemImage url={item.image_url}/>
@@ -14,13 +13,7 @@ const CartItemDisplay = (props) => {
             <CartQuantityAdjust {...item}/>
             </CartItemInfoContainer>
         </CartItemContainer>
-
     )
-
-
-
-
 }
-
 
 export default CartItemDisplay

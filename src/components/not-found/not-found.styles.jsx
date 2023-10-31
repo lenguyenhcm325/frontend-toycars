@@ -2,10 +2,6 @@ import styled from "styled-components";
 
 export const NotFoundContainer = styled.div`
     display: flex;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
     justify-content: center;
     align-items: center;
     margin-bottom: 16px;

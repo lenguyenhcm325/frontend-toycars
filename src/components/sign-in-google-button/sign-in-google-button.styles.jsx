@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export const SignInButtonContainer = styled.div`
 
-// text-align: center;
 & button {
     background-color: #3498db;
     color: #fff;

@@ -23,8 +23,6 @@ export const toggleProductInWishlistFB = async (uid, productInfo) => {
     await setDoc(doc(wishlistRef, customWishlistDocumentId), productInfo);
   } else {
     await setDoc(userDocumentRef, {});
-
-    const shoppingCartRef = collection(userDocumentRef, "shoppingCart");
     const wishlistRef = collection(userDocumentRef, "wishlist");
 
     await setDoc(doc(wishlistRef, customWishlistDocumentId), productInfo);
@@ -81,8 +79,6 @@ export const toggleWishlistOnFirestore = async ({
     // await setDoc(doc(wishlistRef, customWishlistDocumentId), productInfo);
   } else {
     await setDoc(userDocumentRef, {});
-
-    const shoppingCartRef = collection(userDocumentRef, "shoppingCart");
     const wishlistRef = collection(userDocumentRef, "wishlist");
     const customWishlistDocumentId = stringNormalizer(model_brand);
 

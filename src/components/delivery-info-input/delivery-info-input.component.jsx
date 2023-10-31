@@ -1,4 +1,4 @@
-import React, {Profiler, useEffect, useState} from "react";
+import React, { useEffect, useState} from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import LoadingSpinner from "../loading-spinner/loading-spinner.component";
 import { useSelector } from "react-redux";

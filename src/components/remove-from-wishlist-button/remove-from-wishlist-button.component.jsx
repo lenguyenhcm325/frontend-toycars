@@ -11,10 +11,7 @@ const RemoveFromWishlistButton = ({image_url, model_brand, price, description}) 
     return (
         <RemoveFromWishlistButtonContainer onClick={() => dispatch(handleToggleWishlistOnFS(currentUser.uid, model_brand, image_url, description ,price))}>
             <SVGasImage src="https://toycars-img.s3.eu-central-1.amazonaws.com/svg/cross-svg.svg" alt="cross svg" /> <span>Remove from wishlist</span>
-
         </RemoveFromWishlistButtonContainer>
-
-
     )
 }
 

@@ -8,12 +8,7 @@ const CTA = () => {
             <FooterSectionHeader fontSize={36}>Newsletter</FooterSectionHeader>
             <p>Want to know what we're up to? Sign up for the newsletter and join our tribe</p>
             <CTAEmailBox/>
-
         </CTAContainer>
-
     )
 }
-
-
-
 export default CTA;

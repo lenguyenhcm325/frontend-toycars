@@ -37,6 +37,6 @@ export const WishlistCardContainer = styled.div`
 
 
     & .model-description {
-    font-size: 20px; /
+    font-size: 20px;  
 }
 `

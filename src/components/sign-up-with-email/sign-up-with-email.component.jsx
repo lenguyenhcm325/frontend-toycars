@@ -1,13 +1,11 @@
-import React, {useEffect, useState, useRef} from "react";
+import React, {useState} from "react";
 import { handleCreateAuthUserWithEP } from "../../store/user/user.thunk";
 import { SignUpWithEmailContainer } from "./sign-up-with-email.styles";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { selectCurrentUser, selectAuthError } from "../../store/user/user.selector";
-import { clearStateAfterError } from "../../store/user/user.action";
 const SignUpWithEmail = () => {
-  // const [errorToDisplay, setErrorToDisplay] = useState(null);
   const currentUser = useSelector(selectCurrentUser);
   const currentError = useSelector(selectAuthError);
   const dispatch = useDispatch();
@@ -29,11 +27,6 @@ const SignUpWithEmail = () => {
         e.preventDefault();
       const {email, password} = formData;
       dispatch(handleCreateAuthUserWithEP(email, password))
-      // if (currentError){
-      //   setErrorToDisplay(currentError);
-      // }else {
-      //   setErrorToDisplay(null);
-      // }
         // TODO? send this to the backend for further processing
       };
 return (
@@ -67,11 +60,6 @@ return (
         <button type="submit">Sign Up</button>
       </div>
     </form>
-    {/* {
-      errorToDisplay && <p>{errorToDisplay}</p>
-    } */}
-
-
     </SignUpWithEmailContainer>
 )
 

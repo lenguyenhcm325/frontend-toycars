@@ -7,9 +7,6 @@ const initialState = {
   error: null,
   isLoading: false,
 };
-
-// wishlist: [ flatten_model_brand_name: {all the 4 fields}]
-
 export const wishlistReducer = (state = initialState, action) => {
   let tempWishlist;
   if (action.type == WISHLIST_ACTION_TYPES.FETCH_WISHLIST_START) {
@@ -58,26 +55,3 @@ export const wishlistReducer = (state = initialState, action) => {
     return { ...state };
   }
 };
-
-// let regex = /\s/g;
-// let replaceChar = "_";
-// const { model_brand, brand_name } = action.payload;
-// const brandNameWithoutSpace = brand_name.replace(regex, replaceChar);
-// if (!(brandNameWithoutSpace in state.wishlist)) {
-//   tempWishlist = { ...state.wishlist };
-//   let newWishlist = Object.assign(tempWishlist, {
-//     [brandNameWithoutSpace]: [model_brand],
-//   });
-//   return { ...state, wishlist: newWishlist };
-// } else if (brandNameWithoutSpace in state.wishlist) {
-//   tempWishlist = { ...state.wishlist };
-//   if (tempWishlist[brandNameWithoutSpace].includes(model_brand)) {
-//     let newlyModifiedBrand = tempWishlist[brandNameWithoutSpace].filter(
-//       (element) => element !== model_brand
-//     );
-//     tempWishlist[brandNameWithoutSpace] = newlyModifiedBrand;
-//   } else if (!tempWishlist[brandNameWithoutSpace].includes(model_brand)) {
-//     tempWishlist[brandNameWithoutSpace].push(model_brand);
-//   }
-//   return { ...state, wishlist: tempWishlist };
-// }

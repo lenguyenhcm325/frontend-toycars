@@ -15,14 +15,8 @@ const ResultModelCard = ({
             <p className="model-price">€{price}</p>
             <p className="model-description">{description}</p>
             <div style={{display: "flex", gap:"24px"}}>
-            {/* <AddToCartButton {...props}/>
-            <RemoveFromWishlistButton
-            {...props}        
-            /> */}
             <AddToCartButton/>
             </div>
-
-
         </div>
 
     </ResultModelCardContainer>)

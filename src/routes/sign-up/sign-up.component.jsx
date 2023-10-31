@@ -5,7 +5,6 @@ import { SignUpFormContainer } from './sign-up.styles';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearStateAfterError } from '../../store/user/user.action';
 import { selectCurrentUser ,selectAuthError} from '../../store/user/user.selector';
-import ConfirmSignUp from '../confirm-sign-up/confirm-sign-up.component';
 const SignUpForm = () => {
   const dispatch = useDispatch();
   const currentError = useSelector(selectAuthError);
@@ -21,8 +20,6 @@ const SignUpForm = () => {
 }, [currentError])
   return (
     <div>
-      
-   
         <SignUpFormContainer>
           <SignUpWithEmail />
           <SignInGoogleButton/>

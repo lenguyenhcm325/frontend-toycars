@@ -1,12 +1,9 @@
 import { styled } from "styled-components";
 
 
-export const CTAEmailBoxContainer = styled.div`
-    // display: flex; 
-    // align-items: center;    
+export const CTAEmailBoxContainer = styled.div`   
     display: flex; 
     align-items: center; 
-    // background-color: #e7f5ff; 
     border-radius: 4px; 
     & form {
         width: 80%;
@@ -20,9 +17,6 @@ export const CTAEmailBoxContainer = styled.div`
 
 export const EmailInputField = styled.input`
     font-size: 20px;
-    // padding: 16px;
-    // color: #e7f5ff;
-    // box-sizing: content-box;
     flex: 1;
     padding: 16px;
     border: none;
@@ -42,9 +36,6 @@ export const EmailInputField = styled.input`
 `
 
 export const EmailSubmitButton = styled.button`
-    // padding: 16px;
-    // color: #74c0fc;
-    // box-sizing: content-box;
     font-size: 20px;
     padding: 16px;
     color: white;

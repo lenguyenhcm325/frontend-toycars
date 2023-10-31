@@ -19,7 +19,6 @@ const CartItemsBlock = ({onBubble}) => {
             </div>
         {
             !isOnDeliverySection && cartItems.map(cartItem => {
-                // return (<CartItemDisplay item={cartItem} />)
                 const flattenNameWithoutSpace = Object.keys(cartItem)[0];
                 return (<CartItemDisplay key={flattenNameWithoutSpace} item={cartItem[flattenNameWithoutSpace]} />)
             })

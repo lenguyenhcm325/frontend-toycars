@@ -37,14 +37,14 @@ export const SignInWithEmailContainer = styled.div`
   }
 
 & button {
-    background-color: #3498db; /* Light blue color */
-    color: #fff; /* White text color */
-    border: none; /* Remove the border */
-    padding: 10px 20px; /* Add padding for better appearance */
-    font-size: 16px; /* Font size */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Cursor on hover */
-    text-decoration: none; /* Remove underlines */
+    background-color: #3498db;  
+    color: #fff;  
+    border: none;  
+    padding: 10px 20px;  
+    font-size: 16px;  
+    border-radius: 5px; 
+    cursor: pointer;  
+    text-decoration: none;  
     transition: background-color 0.3s ease;
 }
 `

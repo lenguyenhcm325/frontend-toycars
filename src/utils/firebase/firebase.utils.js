@@ -39,12 +39,6 @@ const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 const auth = getAuth();
 
-// export const getCurrentUser123 = async () => {
-//   const user = auth.currentUser;
-//   const token = await user.getIdToken();
-//   console.log(token);
-// };
-
 export const retrieveIdToken = async () => {
   const user = auth.currentUser;
   console.log("this is user");
@@ -61,22 +55,8 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
   return result;
 };
 
-const doStuff = async () => {
-  const result = await createUserWithEmailAndPassword(
-    auth,
-    "lenguyenhcm325@gmail.com",
-    "12345678"
-  );
-  console.log(result);
-  return result;
-};
-//
-
 export const signInWithGoogle = async () => {
   const result = await signInWithPopup(auth, provider);
-  // console.log(result._tokenResponse);
-  // console.log(result._tokenResponse);
-  // console.log(result._tokenResponse);
   console.log(await result.user.getIdToken());
   console.log(await result.user.getIdToken());
   console.log(await result.user.getIdToken());
@@ -101,13 +81,6 @@ export const addEntryToShoppingCartTest = async () => {
 
   // Reference to the subcollection
   const subcollectionRef = collection(parentDocumentRef, "shoppingCart");
-
-  // {
-  //     "model_brand": "XtremeDrive CanyonTracker",
-  //     "price": "$35.99",
-  //     "image_url": "https://toycars-img.s3.eu-central-1.amazonaws.com/off_road_cars/off_road_vehicle__other_colors_S3743581216_St25_G7.5.jpeg",
-  //     "description": "The XtremeDrive CanyonTracker Off-Road toy is ready to navigate steep canyons and rugged terrain in your playtime world. Embark on thrilling off-road adventures with this toy."
-  //   }
 
   // Add documents to the subcollection
   try {

@@ -1,7 +1,6 @@
 import React from "react";
 import { EmailInputField, EmailSubmitButton, CTAEmailBoxContainer } from "./cta-email-box.styles";
 
-
 const CTAEmailBox = () => {
 return(    <CTAEmailBoxContainer>
     <form>
@@ -10,7 +9,6 @@ return(    <CTAEmailBoxContainer>
     </form>
 
 </CTAEmailBoxContainer>)
-
 }
 
 export default CTAEmailBox;

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'; 
 import { InputContainer, SearchButton } from './search-bar.styles';
 import { useLocation, useSearchParams, useNavigate } from 'react-router-dom';
-function SearchBar({onSearch}) {
+function SearchBar() {
     const navigate = useNavigate();
     let location = useLocation(); 
     const [searchQuery, setSearchQuery] = useState("");
@@ -38,11 +38,7 @@ function SearchBar({onSearch}) {
         searchQueryParams.set("searchQuery", searchQuery);
         e.preventDefault();
         localStorage.setItem("searchQuery", searchQuery);
-        onSearch(searchQuery);
         navigate(`/results?${searchQueryParams.toString()}`)
-
-
-
     }; 
 
     return (

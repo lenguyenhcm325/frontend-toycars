@@ -2,20 +2,13 @@ import styled from "styled-components";
 
 
 export const FilterSortContainer = styled.div`
-
-
-
     height: 256px;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 10px;
-    font-size: 18px;
-    
-    
+    font-size: 18px; 
     display: flex;
     flex-direction: column;
-    
-    // justify-content: center;
     align-items: center;
 
 & .price-container {

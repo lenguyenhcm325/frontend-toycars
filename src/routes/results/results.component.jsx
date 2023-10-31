@@ -79,7 +79,6 @@ const Results = () => {
             isLoading && <LoadingSpinner/>
         }
             <FilterSort/>
-            {/* <ResultModelCard/> */}
         <div>
             {
                 !resultsData.length? (!isLoading && <p className="no-product">Sorry, we couldn't find any products that match your search criteria.</p>)

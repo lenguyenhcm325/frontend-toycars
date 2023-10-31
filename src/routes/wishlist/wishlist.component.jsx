@@ -1,5 +1,4 @@
 import React from "react";
-import { WishlistCardContainer } from "./wishlist.styles";
 import {useSelector} from "react-redux";
 import WishlistCard from "../../components/wishlist-model-card/wishlist-model-card.component";
 import {selectWishlist} from "../../store/wishlist/wishlist.selector"

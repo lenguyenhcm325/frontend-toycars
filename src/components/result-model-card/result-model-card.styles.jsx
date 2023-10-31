@@ -51,7 +51,7 @@ padding-left: 20px;
 
 
 & .model-description {
-font-size: 20px; /
+font-size: 20px; 
 }
 
 

@@ -1,20 +1,8 @@
 import React from "react";
 import { WishlistCardContainer } from "./wishlist-model-card.styles";
-import { useSelector } from "react-redux";
-import { selectCurrentUser } from "../../store/user/user.selector";
 import AddToCartButton from "../add-to-cart-button/add-to-cart-button.component"
 import RemoveFromWishlistButton from "../remove-from-wishlist-button/remove-from-wishlist-button.component";
 const WishlistCard = (props) => {
-    const uid = useSelector(selectCurrentUser).uid;
-    // {
-    //     uid,
-    //     model_brand,
-    //     price,
-    //     image_url, 
-    //     description,
-    //     brand_name   
-    // }
-
     const {
         image_url, model_brand, price, description
     } = props;

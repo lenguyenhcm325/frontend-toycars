@@ -8,20 +8,13 @@ import { clearStateAfterError } from "../../store/user/user.action";
 import { selectAuthError, selectCurrentUser } from "../../store/user/user.selector";
 const SignInWithEmail = () => {
   const dispatch = useDispatch();
-  // const didMountRef = useRef(false);
   const [errorToDisplay, setErrorToDisplay] = useState(null);
   const currentError = useSelector(selectAuthError);
   const currentUser = useSelector(selectCurrentUser);
   useEffect(() => {
-  
-
-    // if (didMountRef.current){
       if (currentError){
         setErrorToDisplay(currentError);
         dispatch(clearStateAfterError())
-
-    // }
-    // didMountRef.current = true;
   } 
 
     
@@ -84,9 +77,6 @@ return (
     }
     
     </SignInWithEmailContainer>
-)
-
-
-}
+)}
 
 export default SignInWithEmail

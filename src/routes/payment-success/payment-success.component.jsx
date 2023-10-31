@@ -43,7 +43,6 @@ const PaymentSuccess = () => {
                 if (!response.ok) {
                     setShowNotFound(true);
                 }else {
-                    // the logic gets in here
                     setShowNotFound(false);
                 }
             }catch(err){

@@ -17,10 +17,6 @@ const profileRouter = createBrowserRouter([
             element: <ShowProfile />, 
             
         },
-        // {
-        //     path: ":userId/edit",
-        //     element: <EditProfile />
-        // }
         ]
     }
 ])

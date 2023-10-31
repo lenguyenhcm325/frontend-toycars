@@ -35,8 +35,6 @@ const DeliveryOption = ({onBubble}) => {
       />  
         </DeliveryOptionContainer>
     )
-
-
 }
 
 export default DeliveryOption;

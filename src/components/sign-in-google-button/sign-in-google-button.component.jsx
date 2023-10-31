@@ -7,8 +7,6 @@ import { selectCurrentUser, selectAuthError } from "../../store/user/user.select
 import { Navigate } from "react-router-dom";
 const SignInGoogleButton = () => {
   const dispatch = useDispatch();
-  // const didMountRef = useRef(false);
-  
   const currentError = useSelector(selectAuthError);
   const currentUser = useSelector(selectCurrentUser);
 
@@ -20,9 +18,7 @@ return (    <SignInButtonContainer>
   {
     !currentError && currentUser && <Navigate to="/" replace={true}/>
   }
-    {/* <h2>Sign In with Google</h2> */}
     <button onClick={handleClickSignIn}>Sign In with Google</button>
-    {/* {errorToDisplay && <p>{errorToDisplay}</p>} */}
     </SignInButtonContainer>)
 }
 

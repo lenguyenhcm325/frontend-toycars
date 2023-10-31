@@ -12,14 +12,7 @@ const ShowProfile = () => {
     const [profileInfo, setProfileInfo] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const {id} = useParams();
-
-    let token1; 
     const [token , setToken ] = useState(null);
-
-    // useEffect(() => {
-
-    
-    //   }, [onAuthStateChanged])
     useEffect(() => {
         const baseApiUrl = import.meta.env.VITE_FIRESTORE_USER_PROFILES_BASE_URL
         onAuthStateChanged(auth,async (user) => {

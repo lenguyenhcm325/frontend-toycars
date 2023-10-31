@@ -2,10 +2,6 @@ import React, {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom"
 import { FilterSortContainer } from "./filter-sort.styles";
 const FilterSort = () => {
-
-
-
-
     const navigate = useNavigate();
     const [searchParamsFromURL] = useSearchParams();
 
@@ -80,7 +76,6 @@ const FilterSort = () => {
 
     return (
         <FilterSortContainer>
-    {/* <div className="filter-container"> */}
     <form onSubmit={handleSubmit}>
         <div className="price-container">
             <div className="filter">
@@ -115,7 +110,6 @@ const FilterSort = () => {
             <button className="submit-button" type="submit">Apply filter</button>
         </div>
     </form>
-    {/* </div>             */}
         </FilterSortContainer>
     )
 }

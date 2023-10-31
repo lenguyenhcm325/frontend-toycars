@@ -27,10 +27,7 @@ export const handleSignInWIthGoogle = () => async (dispatch) => {
     const { email, uid } = result.user;
     dispatch(googleLoginSuccess({ email, uid }));
     await createIfNotExistUserProfile(uid);
-
-    // window.location.href = "/";
   } catch (error) {
-    // dispatch(googleLoginError(error));
     if (error.code === "auth/invalid-verification-id") {
       dispatch(
         googleLoginError(
@@ -73,8 +70,6 @@ export const handleCreateAuthUserWithEP =
       dispatch(emailSignupSuccess({ email, uid }));
       await createIfNotExistUserProfile(uid);
       // here to check if the document already exist
-
-      // window.location.href = "/";
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         dispatch(

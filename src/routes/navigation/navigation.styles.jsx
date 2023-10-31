@@ -1,7 +1,6 @@
 import { ReactComponent as CarLogoSVG } from "../../assets/car-svgrepo-com.svg"
 import { styled } from "styled-components";
-// import { ReactComponent as UserSVGFile } from "../../assets/user-svg.svg"
-// import { ReactComponent as CartSVGFile } from "../../assets/shopping-cart-svg.svg"
+ 
 
 
 
@@ -29,10 +28,7 @@ export const NavigationContainer = styled.div`
 `
 
 export const LogoContainer = styled.div`
-    // display: flex;
-    width: 12%;
-    // justify-content: center;   
-    
+    width: 12%;   
 `
 
 export const IconsContainer = styled.div`

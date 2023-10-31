@@ -23,14 +23,10 @@ export const InputContainer = styled.input`
 `
 
 export const SearchButton = styled.button`
-    // padding: 10px; 
-    // border-radius: px;   
-    // background-color: #a5d8ff;
-    // color: black;
     padding: 12px 20px;
     border-radius: 0 25px 25px 0;
     border: none;
-    background-color: #030e17; // dark blue-ish color
+    background-color: #030e17;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -38,6 +34,6 @@ export const SearchButton = styled.button`
     font-size: 16px;
 
     &:hover {
-        background-color: #071c2e; // slightly darker shade on hover
+        background-color: #071c2e; 
     }
 `

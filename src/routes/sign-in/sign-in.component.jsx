@@ -8,15 +8,10 @@ const SignInForm = () => {
     }, [])
     return (
         <SignInFormContainer>
-            {/* <div className="sign-in-buttons"> */}
                 <SignInWithEmail/>
                 <SignInGoogleButton/>
-            {/* </div> */}
-            {/* <button onClick={handleOnclick}>Pleaes click here!</button> */}
             <p className="dont-have-account-p">Don't have an account? <Link to="/signup"><span>Sign up now!</span></Link></p>
         </SignInFormContainer>
-
-
     )
 }
 

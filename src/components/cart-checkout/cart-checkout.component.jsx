@@ -1,4 +1,4 @@
-import React , {useState}from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { calculateSubTotal } from "../../store/cart/cart.selector";
 import CheckoutSubmitButton from "../checkout-submit-button/checkout-submit-button.component";
