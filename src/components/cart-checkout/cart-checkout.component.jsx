@@ -34,7 +34,7 @@ const CartCheckout = ({deliveryCost}) => {
                     <p className="title">TOTAL PRICE</p>
                     <p>{calculateTotalCost(subTotal, deliveryCost)}</p>
                 </div>
-                <CheckoutSubmitButton/>
+                <CheckoutSubmitButton deliveryCost={deliveryCost}/>
             </div>
 
         </CartCheckoutContainer>

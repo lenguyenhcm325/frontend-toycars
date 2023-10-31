@@ -66,8 +66,6 @@ export const toggleWishlistOnFirestore = async ({
     if (modelSnapshot.exists()) {
       deleteDoc(modelRef);
     } else {
-      //   const wishlistRef = collection(userDocumentRef, "wishlist");
-      //   const customWishlistDocumentId = stringNormalizer(model_brand);
       await setDoc(doc(wishlistRef, customWishlistDocumentId), {
         model_brand,
         image_url,
@@ -75,8 +73,6 @@ export const toggleWishlistOnFirestore = async ({
         price,
       });
     }
-
-    // await setDoc(doc(wishlistRef, customWishlistDocumentId), productInfo);
   } else {
     await setDoc(userDocumentRef, {});
     const wishlistRef = collection(userDocumentRef, "wishlist");

@@ -2,10 +2,7 @@ import styled from "styled-components"
 
 
 export const InputContainer = styled.input`
-    // font-size: 16px; 
-    // width: 700px;
-    // padding: 8px;
-    // border-radius: 10px;
+
 
     font-size: 16px; 
     width: 700px;
@@ -14,10 +11,10 @@ export const InputContainer = styled.input`
     border: none;
     outline: none;
     margin-right: -5px;
-    border: 2px solid #030e17; // dark blue-ish color
+    border: 2px solid #030e17; 
 
     ::placeholder {
-        color: #7a8b9c; // lighter shade for placeholder text
+        color: #7a8b9c; 
     }
 
 `
