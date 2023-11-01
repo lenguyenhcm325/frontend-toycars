@@ -41,7 +41,6 @@ const DeliveryInfoInput = ({onBubble}) => {
                     method: "GET", 
                     headers: {
                         "Authorization": `Bearer ${token1}`,
-                        "Content-Type": "application/json"
                     }
                 })
                 if (!response.ok){
