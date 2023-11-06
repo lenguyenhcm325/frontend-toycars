@@ -29,7 +29,7 @@ const FilterSort = () => {
     const handleChangePrice = (e) => {
         setPriceRange(
             {
-                ...priceRange, [e.target.name]: e.target.value
+                ...priceRange, [e.target.name]: Number(e.target.value)
             }
             
         )
@@ -39,7 +39,8 @@ const FilterSort = () => {
 
 
     useEffect(() => {
-        if (priceRange.minPrice > priceRange.maxPrice || priceRange.maxPrice < priceRange.minPrice){
+        console.log(priceRange)
+        if ((priceRange.minPrice > priceRange.maxPrice) || (priceRange.maxPrice < priceRange.minPrice)){
             setIsValidPriceRange(false)
         }
         else {
